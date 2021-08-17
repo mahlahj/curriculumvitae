@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900&display=swap');/*imports font, sizes and display*/
+*/*apply to all*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-seriff;
+}
+body
+{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*vh = viewport-height*/
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #ffff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_Side
+{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*horizontal line*/
+}
+.profileText .imageBox
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden; /*chanve cover of image box*/
+}
+.profileText .imageBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*image cover*/
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /*changes image*/
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase; /*change letters below photo*/
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em; /*estilize font*/
+}
+.profileText h2 span
+{
+    font-size: 0.8em; /*change subtitle font size*/
+    font-weight: 300;
+
+}
+.contactInfo
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul
+{
+    position: relative;
+}
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+
+}
+.contactInfo.Education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.Education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.Education h4:nth-child(2)
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.Education h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.Languages .percent /*darkens the line*/
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.Languages .percent div /*affects the fullness of the line*/
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.container .right_Side
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child /*selects n-th part of about to change*/
+{
+    margin-bottom: 0;
+}
+.title2 /*applies chages to title2*/
+{
+    color: 003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p /*Change color of paragraph*/
+{
+    color: #333;
+}
+.about .box /*applies changes to about box*/
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company /*applies changes to about box year_company*/
+{
+    min-width: 150px;
+}
+.about .box .year_company h5 /*applies changes to about box year_company h5*/
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4 /*applies changes to about box year_company h4*/
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box /*applies changes to skills box*/
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 /*applies changes to skills box h4*/
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent /*creates a bar besides skills box*/
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .box .percent div /*affects fullnes of the bar*/
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a3f4;
+}
+.interests ul /*affects visualization of interests*/
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interests ul li /*affects color of letters*/
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interests ul li .fas /*affects icon color*/
+{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
